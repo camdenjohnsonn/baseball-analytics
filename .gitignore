@@ -1,0 +1,9 @@
+data/raw/
+data/processed/
+data/baseball.db
+models/
+.venv/
+__pycache__/
+*.pkl
+*.pyc
+.ipynb_checkpoints/
