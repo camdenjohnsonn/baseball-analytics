@@ -26,10 +26,10 @@ baseball_analytics/
 │   ├── 02_exploration.sql    # Analytical views with CTEs and window functions
 │   └── 03_runner.py          # Executes SQL views and loads DataFrames
 ├── notebooks/
-│   ├── 01_cleaning.ipynb     # Data cleaning and feature engineering
-│   ├── 02_eda_visualization.ipynb  # Exploratory data analysis
-│   ├── 03_ops_modeling.ipynb       # OPS prediction models
-│   └── 04_hof_modeling.ipynb       # Hall of Fame prediction models
+│   ├── cleaning.ipynb     # Data cleaning and feature engineering
+│   ├── eda_visualization.ipynb  # Exploratory data analysis
+│   ├── ops_modeling.ipynb       # OPS prediction models
+│   └── hof_modeling.ipynb       # Hall of Fame prediction models
 ├── reports/
 │   └── baseball_report.py    # PDF report generation
 ├── outputs/
