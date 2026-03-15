@@ -47,7 +47,8 @@ story.append(Paragraph(
     "In this project, we will apply industry-level data science techniques to the Lahman Baseball Database, " \
     "a historical record of Major League Baseball statistics dating back to 1871. This project demonstrates an " \
     "end-to-end data analytics pipeline including database creation, " \
-    "SQL querying, data cleaning and feature selection, exploratory data analysis, and machine learning modeling.",
+    "SQL querying, data cleaning and feature selection, exploratory data analysis, and machine learning modeling." \
+    "The goal is to predict the OPS for a players next season, and their probability of making the Hall of Fame",
     style_body))
 story.append(Spacer(1, 0.1*inch))
 story.append(Paragraph("Two predictive models were developed:", style_body))
@@ -162,7 +163,8 @@ story.append(Paragraph(
 story.append(Paragraph("<b>Feature Engineering</b>", style_h2))
 story.append(Paragraph(
     "Several key features were engineered from the raw statistics. " \
-    "These include On Base Percentage (OBP), Slugging (SLG), and OPS. Player age was calculated from birth year "
+    "These include On Base Percentage (OBP), Slugging (SLG), and On-base plus Slugging (OPS). " \
+    "Player age was calculated from birth year "
     "and season year. Our target variable (next_OPS) was created using pandas shift and group by operators.",
     style_body))
 
@@ -263,6 +265,8 @@ story.append(Paragraph(
 add_image("outputs/figures/shap_ops.png",
     caption="Figure 7: SHAP feature importance for OPS prediction. OPS, SLG, and BB dominate.")
 
+story.append(PageBreak())
+
 # ── Hall of Fame Prediction Model ────────────────────────────
 story.append(Paragraph("Hall of Fame Prediction Model", style_h1))
 story.append(Paragraph(
@@ -282,7 +286,7 @@ story.append(Paragraph(
 
 story.append(Paragraph("<b>Model Comparison</b>", style_h2))
 
-hof_table_data = [Longevity
+hof_table_data = [
     ['Model', 'AUC-ROC', 'Recall (Inducted)', 'Precision (Inducted)'],
     ['Logistic Regression', '0.896', '0.87', '0.35'],
     ['XGBoost Classifier', '0.859', '0.74', '0.59'],
@@ -322,7 +326,6 @@ story.append(Paragraph(
 add_image("outputs/figures/shap_hof.png",
     caption="Figure 8: SHAP feature importance for HOF prediction. Longevity and contact dominate over power.")
 
-story.append(PageBreak())
 
 # ── Player Projections ───────────────────────────────────────
 story.append(Paragraph("Player Projections", style_h1))
@@ -377,7 +380,7 @@ story.append(Paragraph(
 
 story.append(Paragraph("<b>Hall of Fame Prediction</b>", style_h2))
 story.append(Paragraph(
-    "Aggregated statistics such as RBI, Hits, and number of seasons were indicated as the " \
+    "Aggregated statistics such as total RBI, hits, and number of seasons were indicated as the " \
     "most important predictors for Hall of Fame induction. This suggests HOF voters reward " \
     "consistency in careers over peak performance. The model predicted Barry Bonds as a near-certain " \
     "HOF candidate based purely on statistics, highlighting the gap between statistical merit and the " \
@@ -394,7 +397,6 @@ story.append(Paragraph(
     "was shown",
     style_body))
 
-story.append(PageBreak())
 
 # ── Technical Stack ──────────────────────────────────────────
 story.append(Paragraph("Technical Stack", style_h1))
