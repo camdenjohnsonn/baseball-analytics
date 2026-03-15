@@ -1,6 +1,6 @@
 # Baseball Analytics & Player Performance Prediction
 
-A full end-to-end data science project using the Lahman Baseball Database to predict player performance and Hall of Fame induction probability.
+An end-to-end data science project using the Lahman Baseball Database to predict player performance and Hall of Fame induction probability.
 
 ## Project Overview
 
